@@ -1,0 +1,27 @@
+﻿<Window x:Class="EkzamenPetuhov.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EkzamenPetuhov"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,10,0,0">
+                <TextBlock Text="Выберите вид хлеба" TextAlignment="Center"/>
+                <ComboBox Width="150" Margin="0,5,0,0" Name="Hleb" SelectionChanged="Hleb_SelectionChanged"/>
+                <TextBlock Text="Введите вес хлеба (кг)" TextAlignment="Center"/>
+                <TextBox Width="150" Margin="0,5,0,0" Name="Ves"/>
+                <TextBlock Text="Цена за кг" TextAlignment="Center"/>
+                <TextBox Width="150" Margin="0,5,0,0" Name="PriceKilo" IsEnabled="False"/>
+                <Button Name="Raschet" Width="150" Height="20" Content="Добавить в заказ" Click="Raschet_Click" Margin="0,5,0,0"/>
+            </StackPanel>
+            <StackPanel Margin="30,10,0,0">
+                <TextBox Width="400" Height="300" Name="OrderTextbox"/>
+                <TextBlock Text="-" Name="ItogPriceOrder" TextAlignment="Center"/>
+                <Button Content="Заказать" Name="go" Margin="0,10,0,0" Width="100" Click="go_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
